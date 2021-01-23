@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REAL MADRID</title>
+    <script>
+        function Clothestype(){
+            var isShirt = document.getElementById("Shirt").checked;
+            var isUndershirt = document.getElementById("Undershirt").checked;
+            var isSweater = document.getElementById("Sweater").checked;
+            var isHoodie = document.getElementById("Hoodie").checked;
+            var isCoat = document.getElementById("Coat").checked;
+            var res = 0; 
+            if (isShirt) {
+                var shp = document.getElementById("shp").value;
+                res = shp;
+            }
+            else if (isUndershirt){
+                var ushp = document.getElementById("ushp").value;
+                res = ushp;
+            }
+            else if (isSweater) {
+                var sp = document.getElementById("sp").value;
+                res = sp;
+            }
+            else if (isHoodie){
+                var hp = document.getElementById("hp").value;
+                res = hp;
+            }
+            else if (isCoat){
+                var cp = document.getElementById("cp").value;
+                res = cp;
+            }
+            return res;
+        }
+
+        function Clothescolor(){
+            var selc = document.getElementById("Color").value;
+            var result1 =0;
+            var typeprice = Clothestype();
+            if (document.getElementById("Shirt").checked) {
+
+                if (selc=="Red" || selc=="White"){
+                    result1 = Number(typeprice);
+                }
+                if (selc=="Green"){
+                    result1 = Number(typeprice)+5;
+                }
+                if (selc=="Blue"){
+                    result1 = Number(typeprice)-2;
+                }
+            }
+            if (document.getElementById("Undershirt").checked){
+                if (selc=="Red" || selc=="White"){
+                    result1 = Number(typeprice);
+                }
+                if (selc=="Green"){
+                    result1 = Number(typeprice)+5;
+                }
+                if (selc=="Blue"){
+                    result1 = Number(typeprice)-2;
+                }
+            }
+            if (document.getElementById("Sweater").checked){
+                if (selc=="Red" || selc=="White"){
+                    result1 = Number(typeprice);
+                }
+                if (selc=="Green"){
+                    result1 = Number(typeprice)+5;
+                }
+                if (selc=="Blue"){
+                    result1 = Number(typeprice)-2;
+                }
+            }
+            if (document.getElementById("Hoodie").checked){
+                if (selc=="Red" || selc=="White"){
+                    result1 = Number(typeprice);
+                }
+                if (selc=="Green"){
+                    result1 = Number(typeprice)+5;
+                    
+                }
+                if (selc=="Blue"){
+                    result1 = Number(typeprice)-2;
+                    
+                }
+            }
+            if (document.getElementById("Coat").checked){
+                if (selc=="Red" || selc=="White"){
+                    result1 = Number(typeprice);
+                
+                }
+                if (selc=="Green"){
+                    result1 = Number(typeprice)+5;
+                    
+                }
+                if (selc=="Blue"){
+                    result1 = Number(typeprice)-2;
+                    
+                }
+            }
+            return result1;
+        }
+
+        function Clothessize(){
+            var result2 = 0;
+            var typecolorprice = Clothescolor();
+            if (document.getElementById("S").checked) {
+                if (document.getElementById("Shirt").checked) {
+                    result2 = Number(typecolorprice)*(1-0.1);       
+                }
+                if (document.getElementById("Undershirt").checked) {
+                    result2 = Number(typecolorprice)*(1-0.1);       
+                }
+                if (document.getElementById("Sweater").checked) {
+                    result2 = Number(typecolorprice)*(1-0.1);       
+                }
+                if (document.getElementById("Hoodie").checked) {
+                    result2 = Number(typecolorprice)*(1-0.1);       
+                }
+                if (document.getElementById("Coat").checked) {
+                    result2 = Number(typecolorprice)*(1-0.1);       
+                }
+            }
+            if (document.getElementById("M").checked) {
+                if (document.getElementById("Shirt").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Undershirt").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Sweater").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Hoodie").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Coat").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+            }
+            if (document.getElementById("L").checked) {
+                if (document.getElementById("Shirt").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Undershirt").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Sweater").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Hoodie").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+                if (document.getElementById("Coat").checked) {
+                    result2 = Number(typecolorprice);       
+                }
+            }
+            if (document.getElementById("XL").checked) {
+                if (document.getElementById("Shirt").checked) {
+                    result2 = Number(typecolorprice)*(1+0.1);       
+                }
+                if (document.getElementById("Undershirt").checked) {
+                    result2 = Number(typecolorprice)*(1+0.1);       
+                }
+                if (document.getElementById("Sweater").checked) {
+                    result2 = Number(typecolorprice)*(1+0.1);       
+                }
+                if (document.getElementById("Hoodie").checked) {
+                    result2 = Number(typecolorprice)*(1+0.1);       
+                }
+                if (document.getElementById("Coat").checked) {
+                    result2 = Number(typecolorprice)*(1+0.1);       
+                }
+            }
+            return result2;
+        }
+
+        function Clotheslogo(){
+             var selc1 = document.getElementById("Color").value;
+             var isbackwards = document.getElementById("bw").checked;
+             var isforward = document.getElementById("fw").checked;
+             var isrightsleeve = document.getElementById("rs").checked;
+             var isleftsleeve = document.getElementById("ls").checked;
+             var result3=0;
+             var typecolorsize = Clothessize();
+             if (isbackwards || isforward || isrightsleeve || isleftsleeve) {
+                 if (selc1=="Red") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                 }
+                 if (selc1=="Green") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                 }
+                 if (selc1=="Blue") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                 }
+                 if (selc1=="White") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+3;       
+                     }
+                 }
+             }
+             if (isbackwards && isforward && isrightsleeve && isleftsleeve) {
+                if (selc1=="Red") {
+                    if (document.getElementById("Shirt").checked) {
+                       result3 = Number(typecolorsize)+12;       
+                    }
+                    if (document.getElementById("Undershirt").checked) {
+                       result3 = Number(typecolorsize)+12;       
+                    }
+                    if (document.getElementById("Sweater").checked) {
+                        result3 = Number(typecolorsize)+12;       
+                    }
+                    if (document.getElementById("Hoodie").checked) {
+                        result3 = Number(typecolorsize)+12;       
+                    }
+                    if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                    }
+                 
+                }
+                 if (selc1=="Green") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                 }
+                 if (selc1=="Blue") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                 }
+                 if (selc1=="White") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+12;       
+                     }
+                 }
+             }
+             if (isbackwards && isforward || isbackwards && isrightsleeve || isbackwards && isleftsleeve ||
+                     isforward && isrightsleeve || isforward && isleftsleeve || isrightsleeve && isleftsleeve) {
+                 if (selc1=="Red") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                 }
+                 if (selc1=="Green") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                 }
+                 if (selc1=="Blue") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                 }
+                 if (selc1=="White") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+6;       
+                     }
+                 }
+             }
+             if (isbackwards && isforward && isrightsleeve || isbackwards && isforward && isleftsleeve
+                     || isbackwards && isrightsleeve && isleftsleeve || isforward && isrightsleeve && isleftsleeve ) {
+                 if (selc1=="Red") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                 }
+                 if (selc1=="Green") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                 }
+                 if (selc1=="Blue") {
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                 }
+                 if (selc1=="White") {  
+                     if (document.getElementById("Shirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Undershirt").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Sweater").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Hoodie").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                     if (document.getElementById("Coat").checked) {
+                         result3 = Number(typecolorsize)+9;       
+                     }
+                 }
+             }
+            return result3;
+         }
+
+        function GetTotalPrice(){
+             var priceprekamot = Clotheslogo();
+             var amount = document.getElementById("numItems").value;
+            var fresult = priceprekamot*Number(amount);
+            return fresult;
+        }
+
+        function settheanswer(){
+            var A = document.getElementById("fr").value = GetTotalPrice();    
+        }
+    </script>
+    
+</head>
+<body>
+    <h1 style="color:blue; font-style: oblique; font-weight: bolder; font-size: 5.5ch;">
+        <center>
+             טופס הזמנת בגדים של קבוצת הספורט <br>
+        </center>
+    </h1>
+    <h2 style="color:black; font-size: 2.5ch;">
+        Raghad knani 315989269 <br>
+        Mohammad ahmad 318427358
+    </h2>
+    <center>
+            <img src="https://previews.123rf.com/images/moovstock/moovstock1701/moovstock170100864/70598792-close-up-of-waving-flag-with-real-madrid-c-f-football-club-logo.jpg" width="350" >
+    </center>
+    <form action="https://formspree.io/f/moqpkgzq" method="POST">
+        <center>
+        <label style="color:darkblue; font-style: oblique; font-weight: bolder;" >
+            Number Of Order: &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" size="8" value="29760734" readonly>
+        </label>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            First Name: &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="Fname" size="20" placeholder="Please enter first name" value="">
+        </label>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Last Name: &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="Lname" size="20" placeholder="Please enter last name" value="">
+        </label>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Type Of Clothing: <br>
+        </label>
+            <input type="radio" id="Shirt" value="Shirt" name="Type Of Clothing" checked>
+            <label for="Shirt">Shirt</label>
+            <input type="text" size="3" name= "ShirtP" id="shp" value="10" readonly>
+            <input type="text" size="3" value="NIS" readonly>
+            <br>
+
+            <input type="radio" id="Undershirt" value="Undershirt" name="Type Of Clothing">
+            <label for="Undershirt">Undershirt</label>
+            <input type="text" size="3" name= "UndershirtP" id="ushp" value="10" readonly>
+            <input type="text" size="3" value="NIS" readonly>
+            <br>
+
+            <input type="radio" id="Sweater" value="Sweater" name="Type Of Clothing">
+            <label for="Sweater">Sweater</label>
+            <input type="text" size="3" name= "SweaterP" id="sp" value="20" readonly>
+            <input type="text" size="3" value="NIS" readonly>
+            <br>
+
+            <input type="radio" id="Hoodie" value="Hoodie" name="Type Of Clothing">
+            <label for="Hoodie">Hoodie</label>
+            <input type="text" size="3" name= "HoodieP" id="hp" value="30" readonly>
+            <input type="text" size="3" value="NIS" readonly>
+            <br>
+
+            <input type="radio" id="Coat" value="Coat" name="Type Of Clothing">
+            <label for="Coat">Coat</label>
+            <input type="text" size="3" name= "CoatP" id="cp" value="50" readonly>
+            <input type="text" size="3" value="NIS" readonly>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Color: &nbsp;&nbsp;&nbsp;&nbsp;
+        </label>
+        <select name="select1" id="Color">
+            <option value="Red" id="r">Red</option>
+            <option value="Green" id="g">Green</option>
+            <option value="Blue" id="b">Blue</option>
+            <option value="White" id="w" selected>White</option>
+        </select>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Size: <br>
+        </label>
+            <input type="radio" id="S" value="S" name="Size">
+            <label for="S">S</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="M" value="M" name="Size">
+            <label for="M">M</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="L" value="L" name="Size">
+            <label for="L">L</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="radio" id="XL" value="XL" name="Size">
+            <label for="XL">XL</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Position Of The Group Logo: <br>
+        </label>
+            <input type="checkbox" name="backwards" value="backwards" id="bw" tabindex="1">
+            <label for="backwards">backwards</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="checkbox" name="Forward" value="Forward" id="fw" tabindex="2">
+            <label for="Forward">Forward</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="checkbox" name="Right Sleeve" value="Right Sleeve" id="rs" tabindex="3">
+            <label for="Right Sleeve">Right Sleeve</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <input type="checkbox" name="Left Sleeve" value="Left Sleeve" id="ls" tabindex="4">
+            <label for="Left Sleeve">Left Sleeve</label>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" > 
+            Address:<br>
+            <textarea name="address" rows="10" cols="30" placeholder="please enter your address" value=""></textarea>
+        </label>
+        <br><br>
+        <label style="color: darkblue; font-style: oblique; font-weight: bolder;" >
+            Amount Of Items: &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="numItems" name="numItems" size="20" value="1">
+        </label>
+        <br><br>
+            
+        <div id="finalresult" style="color:darkblue; font-style: oblique; font-weight: bolder;" >
+            The price :  &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="finalresult" id="fr" >
+        </div>
+        <br>
+            <input type="button" name="btn1" value="חשב" onclick="settheanswer()">
+            <br><br>
+            <input type="submit" name="submit1" onclick="" value="שלח הזמנה" >
+            <br><br>
+            <input type="reset" name="reset1" value="התחל מהתחלה">
+                        
+    </form>
+</body>
+</html>
